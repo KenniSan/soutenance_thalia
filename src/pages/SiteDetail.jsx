@@ -3,10 +3,13 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, Clock, Banknote, MapPin, CalendarDays } from 'lucide-react'
 import { sites } from '../data/sites'
 import SiteCard from '../components/SiteCard'
+import Lightbox from '../components/Lightbox'
+import { useState } from 'react'
 
 export default function SiteDetail() {
   const { slug } = useParams()
   const site = sites.find((s) => s.slug === slug)
+  const [lightboxIndex, setLightboxIndex] = useState(null)
 
   if (!site) {
     return (
@@ -60,6 +63,18 @@ export default function SiteDetail() {
                 <p className="text-gray-600 leading-relaxed text-lg">{site.longDescription}</p>
               </motion.div>
 
+              {site.video && (
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-10">
+                  <h3 className="font-display text-xl font-bold text-gray-900 mb-4">Vidéo</h3>
+                  <video
+                    src={site.video}
+                    poster={site.image}
+                    controls
+                    className="w-full aspect-video object-cover rounded-xl"
+                  />
+                </motion.div>
+              )}
+
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-10">
                 <h3 className="font-display text-xl font-bold text-gray-900 mb-4">Galerie</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -72,6 +87,7 @@ export default function SiteDetail() {
                       transition={{ delay: i * 0.1 }}
                       src={img}
                       alt=""
+                      onClick={() => setLightboxIndex(i)}
                       className="w-full h-48 object-cover rounded-xl hover:shadow-lg transition-shadow cursor-pointer"
                     />
                   ))}
@@ -139,6 +155,16 @@ export default function SiteDetail() {
           </div>
         </div>
       </section>
+
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={site.gallery}
+          currentIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onNext={() => setLightboxIndex((lightboxIndex + 1) % site.gallery.length)}
+          onPrev={() => setLightboxIndex((lightboxIndex - 1 + site.gallery.length) % site.gallery.length)}
+        />
+      )}
     </div>
   )
 }

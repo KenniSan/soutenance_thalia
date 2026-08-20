@@ -210,6 +210,7 @@ export default function Home() {
                   muted
                   loop
                   playsInline
+                  controls
                   className="w-full aspect-video object-cover"
                   onMouseEnter={(e) => e.target.play()}
                   onMouseLeave={(e) => { e.target.pause(); e.target.currentTime = 0; }}

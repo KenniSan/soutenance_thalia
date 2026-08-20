@@ -1,3 +1,5 @@
+import { mediaUrl } from '../lib/media'
+
 export const sites = [
   {
     id: 1,
@@ -22,6 +24,7 @@ export const sites = [
     longDescription: "L'Embarcadère de Tokpa-Zoungo est la porte d'entrée vers les villages lacustres du lac Nokoué. C'est un lieu vivant où se croisent pêcheurs, commerçants et touristes. Les pirogues traditionnelles assurent la liaison vers Ganvié et autres villages sur pilotis. L'ambiance y est authentique, entre marché flottant et vie quotidienne lacustre.",
     image: "/photos/embarcadere-tokpa-zoungo/01.webp",
     gallery: ["/photos/embarcadere-tokpa-zoungo/01.webp", "/photos/embarcadere-tokpa-zoungo/02.webp", "/photos/embarcadere-tokpa-zoungo/03.webp"],
+    video: mediaUrl("/videos/embarcadere.mp4"),
     location: { lat: 6.44756, lng: 2.36164 },
     address: "Abomey-Calavi Centre",
     hours: "07h30 - 17h00",
@@ -148,6 +151,7 @@ export const sites = [
     longDescription: "Suspendu entre ciel et eau, Chez Josias dresse ses piliers de bois sur le miroir majestueux du lac Nokoué. En ces lieux, le murmure des vagues et la brise lacustre rythment le quotidien dans une atmosphère empreinte de sérénité. Depuis votre balcon sur pilotis, laissez votre regard flotter sur le bal élégant des pirogues traditionnelles et la vie des communautés riveraines. Une escale poétique et dépaysante, au carrefour de la tranquillité de l'eau et de l'authenticité du monde lacustre.",
     image: "/photos/chez-josias/01.webp",
     gallery: ["/photos/chez-josias/01.webp", "/photos/chez-josias/02.webp", "/photos/chez-josias/03.webp"],
+    video: mediaUrl("/videos/chez-josias.mp4"),
     location: { lat: 6.40953, lng: 2.35049 },
     address: "Abomey-Calavi Centre",
     hours: "9h - 00h",
@@ -162,6 +166,7 @@ export const sites = [
     longDescription: "Il existe des endroits où le monde extérieur s'efface doucement pour laisser place à la magie de la nature : Bab's Dock est de ceux-là. Niché dans un écrin de verdure en bordure d'eau, ce domaine paisible invite à la flânerie au milieu des animaux et du chant des oiseaux. Que l'on y vienne pour partager un repas bercé par la brise, pour s'aventurer en pirogue ou simplement pour lire à l'ombre des grands arbres, chaque instant y prend une saveur rare, empreinte de légèreté et de poésie.",
     image: "/photos/babs-dock/01.webp",
     gallery: ["/photos/babs-dock/01.webp", "/photos/babs-dock/02.webp", "/photos/babs-dock/03.webp"],
+    video: mediaUrl("/videos/babs-dock.mp4"),
     location: { lat: 6.35187, lng: 2.26655 },
     address: "Godomey",
     hours: "10h - 19h (sam-dim et jours fériés)",
@@ -190,6 +195,7 @@ export const sites = [
     longDescription: "Traverser le seuil du Musée de la Récade, c'est entreprendre un voyage silencieux au cœur de l'âme et de la grandeur dahoméenne. Ici, le bois sculpté et le métal forgé racontent les secrets des dynasties passées. Chaque sceptre royal, véritable chef-d'œuvre d'art et de diplomatie, semble encore frémir de l'autorité et du prestige des souverains. Un sanctuaire culturel précieux où la beauté de la création artistique rend un hommage vibrant à la mémoire ancestrale.",
     image: "/photos/musee-recade/01.webp",
     gallery: ["/photos/musee-recade/01.webp", "/photos/musee-recade/02.webp", "/photos/musee-recade/03.webp"],
+    video: mediaUrl("/videos/musee-recade.mp4"),
     location: { lat: 6.38623, lng: 2.31867 },
     address: "Godomey",
     hours: "Mardi-samedi 9h30-19h, Dimanche 13h-19h",
@@ -218,6 +224,7 @@ export const sites = [
     longDescription: "Sous la canopée majestueuse de Drabo-Gbo, la forêt respire à son propre rythme, secrète et préservée. Ce royaume de verdure est le refuge béni des primates qui s'élancent avec grâce de branche en branche, sous le regard attentif des amoureux de la nature. Guidé par le chant de la forêt et le bruissement des feuilles, le visiteur s'enfonce le long de sentiers préservés pour vivre une rencontre intime et poétique avec la vie sauvage dans ce qu'elle a de plus pur.",
     image: "/photos/sanctuaire-drabo-gbo/01.webp",
     gallery: ["/photos/sanctuaire-drabo-gbo/01.webp", "/photos/sanctuaire-drabo-gbo/02.webp", "/photos/sanctuaire-drabo-gbo/03.webp"],
+    video: mediaUrl("/videos/sanctuaire-singes.mp4"),
     location: { lat: 6.50081, lng: 2.30152 },
     address: "Togba",
     hours: "8h - 18h",
@@ -232,6 +239,7 @@ export const sites = [
     longDescription: "Au cœur de la vallée verdoyante de Zinvié, ce refuge animalier se dresse comme un havre de paix dédié à la protection de la vie sauvage. C'est l'un des rares sanctuaires où l'on peut admirer le majestueux sitatunga, cette antilope rare adaptée aux milieux aquatiques, ainsi que le python, serpent vénéré et fascinant de la faune locale. Guidé par la fraîcheur des paysages marécageux et le murmure de la nature, le visiteur y vit une rencontre poétique et éducative avec des espèces emblématiques, symbole d'un engagement vibrant pour la préservation de la biodiversité.",
     image: "/photos/refuge-sitatunga/01.webp",
     gallery: ["/photos/refuge-sitatunga/01.webp", "/photos/refuge-sitatunga/02.webp", "/photos/refuge-sitatunga/03.webp"],
+    video: mediaUrl("/videos/refuge-sitatunga.mp4"),
     location: { lat: 6.62438, lng: 2.35394 },
     address: "Zinvié",
     hours: "9h-17h30 (10h week-end)",
@@ -246,6 +254,7 @@ export const sites = [
     longDescription: "Écrin de verdure niché dans la quiétude de Zinvié, Natu Resort se révèle comme une invitation au ressourcement et au bien-être en pleine nature. Entre ses aménagements pensés pour la détente, ses espaces de restauration en plein air et son cadre végétal apaisant, ce domaine offre un véritable refuge loin de l'agitation urbaine. Que ce soit pour une journée de loisirs en famille, un séjour de déconnexion ou un moment de convivialité autour d'activités récréatives, le site conjugue avec harmonie confort, fraîcheur et douceur de vivre au cœur du terroir.",
     image: "/photos/natu-resort/01.webp",
     gallery: ["/photos/natu-resort/01.webp", "/photos/natu-resort/02.webp", "/photos/natu-resort/03.webp"],
+    video: mediaUrl("/videos/natu-resort.mp4"),
     location: { lat: 6.62429, lng: 2.35128 },
     address: "Zinvié",
     hours: "8h - 23h",
