@@ -1,90 +1,90 @@
 export const circuits = [
   {
     id: 1,
-    name: "Découverte Nature & Culture",
-    duration: "2 jours",
+    name: "Circuit Centre Historique",
+    duration: "1 jour",
     difficulty: "Facile",
-    description: "Un circuit complet pour découvrir les incontournables d'Abomey-Calavi : forêt tropicale, village lacustre et temple sacré.",
+    description: "Découvrez le cœur historique d'Abomey-Calavi : Zangbeto, Palais Royal, temples vodoun et Embarcadère de Tokpa-Zoungo.",
     stops: [
-      "Forêt Classée de l'Abomey-Calavi",
-      "Village Artisanal de Ganvié",
-      "Temple des Pythons",
-      "Marché de Dantokpa"
+      "Zangbeto Vadje Centrale",
+      "Palais Royal Fofo DJAKA",
+      "Temple de la Divinité DJISSOU TCHINAN",
+      "Temple Vodoun DAR",
+      "Embarcadère de Tokpa-Zoungo"
     ],
-    image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800",
-    price: "45 000 FCFA/personne",
-    includes: ["Guide", "Transport", "Repas midi J1", "Entrées sites"],
+    image: "/photos/embarcadere-tokpa-zoungo/01.webp",
+    price: "15 000 FCFA/personne",
+    includes: ["Guide", "Transport", "Entrées sites"],
     coordinates: [
-      { lat: 6.45, lng: 2.35 },
-      { lat: 6.42, lng: 2.40 },
-      { lat: 6.44, lng: 2.38 },
-      { lat: 6.37, lng: 2.43 }
+      { lat: 6.50762, lng: 2.35338 },
+      { lat: 6.45045, lng: 2.35975 },
+      { lat: 6.45021, lng: 2.35850 },
+      { lat: 6.44874, lng: 2.35698 },
+      { lat: 6.44756, lng: 2.36164 }
     ]
   },
   {
     id: 2,
-    name: "Aventure Lacustre",
+    name: "Circuit Nature & Faune",
     duration: "1 jour",
     difficulty: "Facile",
-    description: "Journée complète sur le lac Nokoué avec visite de Ganvié, déjeuner de poissons frais et coucher de soleil sur l'eau.",
+    description: "Explorez la richesse naturelle : Sanctuaire des singes, Agoualand, Site des tortues et Refuge du Sitatunga.",
     stops: [
-      "Embarcadère d'Abomey-Calavi",
-      "Village de Ganvié",
-      "Marché flottant",
-      "Restaurant sur l'eau"
+      "Sanctuaire des singes de Drabo-Gbo",
+      "Agoualand",
+      "Site de tortues de Togbin",
+      "Refuge animalier de la vallée du Sitatunga"
     ],
-    image: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800",
+    image: "/photos/sanctuaire-drabo-gbo/01.webp",
     price: "25 000 FCFA/personne",
-    includes: ["Pirogue", "Guide", "Déjeuner", "Gilet de sauvetage"],
+    includes: ["Guide", "Transport", "Entrées sites", "Déjeuner"],
     coordinates: [
-      { lat: 6.40, lng: 2.42 },
-      { lat: 6.42, lng: 2.40 },
-      { lat: 6.43, lng: 2.41 },
-      { lat: 6.41, lng: 2.39 }
+      { lat: 6.50081, lng: 2.30152 },
+      { lat: 6.44070, lng: 2.30159 },
+      { lat: 6.34764, lng: 2.31659 },
+      { lat: 6.62438, lng: 2.35394 }
     ]
   },
   {
     id: 3,
-    name: "Safari & Nature Sauvage",
-    duration: "3 jours",
-    difficulty: "Modéré",
-    description: "Expédition vers le Parc de la Pendjari pour un safari photo mémorable. Observation de la faune sauvage dans son habitat naturel.",
+    name: "Circuit Lacustre & Détente",
+    duration: "1 jour",
+    difficulty: "Facile",
+    description: "Journée au bord du lac Nokoué : Chez Josias, Bab's Dock et Embarcadère. Pirogue et détente garantis.",
     stops: [
-      "Départ d'Abomey-Calavi",
-      "Parc National de la Pendjari",
-      "Safari matin et soir",
-      "Retour Abomey-Calavi"
+      "Embarcadère de Tokpa-Zoungo",
+      "Chez Josias",
+      "Bab's Dock"
     ],
-    image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800",
-    price: "120 000 FCFA/personne",
-    includes: ["Transport 4x4", "Guide safari", "Hébergement 2 nuits", "Pension complète", "Entrées parc"],
+    image: "/photos/chez-josias/01.webp",
+    price: "20 000 FCFA/personne",
+    includes: ["Pirogue", "Guide", "Déjeuner", "Traversée"],
     coordinates: [
-      { lat: 6.45, lng: 2.35 },
-      { lat: 6.48, lng: 2.30 },
-      { lat: 6.50, lng: 2.28 },
-      { lat: 6.45, lng: 2.35 }
+      { lat: 6.44756, lng: 2.36164 },
+      { lat: 6.40953, lng: 2.35049 },
+      { lat: 6.35187, lng: 2.26655 }
     ]
   },
   {
     id: 4,
-    name: "Gastronomie & Artisanat",
+    name: "Circuit Culture & Gastronomie",
     duration: "1 jour",
     difficulty: "Facile",
-    description: "Immersion dans la culture béninoise à travers sa gastronomie et son artisanat. Marché, atelier cuisine et visite d'artisans.",
+    description: "Immersion culturelle : Musée de la Récade, Complexe Assouka, Holy Land Parc et Natu Resort.",
     stops: [
-      "Marché de Dantokpa",
-      "Atelier de cuisine traditionnelle",
-      "Village artisanal",
-      "Dégustation de plats locaux"
+      "Musée de la Récade",
+      "Complexe Assouka",
+      "Holy Land Parc",
+      "Natu Resort"
     ],
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
-    price: "20 000 FCFA/personne",
-    includes: ["Guide", "Ingrédients cuisine", "Repas", "Souvenir artisanal"],
+    image: "/photos/musee-recade/01.webp",
+    price: "18 000 FCFA/personne",
+    includes: ["Guide", "Transport", "Entrées sites", "Dégustation"],
     coordinates: [
-      { lat: 6.37, lng: 2.43 },
-      { lat: 6.39, lng: 2.41 },
-      { lat: 6.40, lng: 2.40 },
-      { lat: 6.38, lng: 2.42 }
+      { lat: 6.38623, lng: 2.31867 },
+      { lat: 6.42238, lng: 2.35036 },
+      { lat: 6.44437, lng: 2.33997 },
+      { lat: 6.62429, lng: 2.35128 }
     ]
   }
 ]

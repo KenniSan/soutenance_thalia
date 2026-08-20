@@ -4,7 +4,7 @@ import { Search, Filter } from 'lucide-react'
 import SiteCard from '../components/SiteCard'
 import { sites } from '../data/sites'
 
-const categories = ['Tous', 'Nature', 'Culture', 'Détente']
+const categories = ['Tous', 'Touristique', 'Religieux', 'Culturel', 'Naturel']
 
 export default function Sites() {
   const [activeCategory, setActiveCategory] = useState('Tous')

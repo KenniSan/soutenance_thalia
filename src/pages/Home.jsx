@@ -1,26 +1,30 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, MapPin, Compass, Users, Star } from 'lucide-react'
+import { ArrowRight, MapPin, Compass, Users, Star, Play } from 'lucide-react'
 import SiteCard from '../components/SiteCard'
 import CircuitCard from '../components/CircuitCard'
 import GuideCard from '../components/GuideCard'
 import { sites } from '../data/sites'
 import { circuits } from '../data/circuits'
 import { guides } from '../data/guides'
+import { videos } from '../data/videos'
+import { mediaUrl } from '../lib/media'
 
 export default function Home() {
   return (
     <div>
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <motion.img
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 8, ease: 'easeOut' }}
-            src="https://images.unsplash.com/photo-1516423810671-73375bd91dd7?w=1920"
-            alt="Abomey-Calavi"
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
             className="w-full h-full object-cover"
-          />
+            poster="/photos/embarcadere-tokpa-zoungo/01.webp"
+          >
+            <source src={mediaUrl("/videos/embarcadere.mp4")} type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -93,7 +97,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: MapPin, label: 'Sites touristiques', value: '6+', desc: 'Lieux à découvrir' },
+              { icon: MapPin, label: 'Sites touristiques', value: '18', desc: 'Lieux à découvrir' },
               { icon: Users, label: 'Guides certifiés', value: '5+', desc: 'Experts locaux' },
               { icon: Star, label: 'Satisfaction', value: '4.8/5', desc: 'Note moyenne' },
             ].map((stat, i) => (
@@ -172,6 +176,54 @@ export default function Home() {
               Voir tous les circuits
               <ArrowRight className="w-4 h-4" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-cream/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Vues aériennes</span>
+            <h2 className="font-display text-4xl font-bold text-gray-900 mt-2">Découvrez en vidéo</h2>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              Survolez les sites touristiques d'Abomey-Calavi et admirez la beauté de la commune depuis le ciel.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {videos.map((video, i) => (
+              <motion.div
+                key={video.id}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="group relative rounded-2xl overflow-hidden shadow-lg bg-black"
+              >
+                <video
+                  src={video.src}
+                  poster={video.poster}
+                  muted
+                  loop
+                  playsInline
+                  className="w-full aspect-video object-cover"
+                  onMouseEnter={(e) => e.target.play()}
+                  onMouseLeave={(e) => { e.target.pause(); e.target.currentTime = 0; }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="font-display text-lg font-bold text-white">{video.name}</h3>
+                  <p className="text-white/70 text-xs mt-1 line-clamp-2">{video.description}</p>
+                </div>
+                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-secondary transition-colors">
+                  <Play className="w-5 h-5 text-white fill-white" />
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

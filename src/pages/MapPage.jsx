@@ -38,8 +38,8 @@ export default function MapPage() {
             className="rounded-2xl overflow-hidden shadow-lg h-[500px] mb-12"
           >
             <MapContainer
-              center={[6.45, 2.35]}
-              zoom={12}
+              center={[6.50, 2.33]}
+              zoom={11}
               style={{ height: '100%', width: '100%' }}
               scrollWheelZoom={true}
             >

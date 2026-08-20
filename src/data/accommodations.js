@@ -8,7 +8,7 @@ export const accommodations = [
     price: "35 000 FCFA/nuit",
     rating: 4,
     amenities: ["Piscine", "Restaurant", "Wi-Fi", "Parking", "Climatisation"],
-    nearSite: "Village Artisanal de Ganvié",
+    nearSite: "Embarcadère de Tokpa-Zoungo",
     location: { lat: 6.43, lng: 2.41 },
     phone: "+229 21 36 00 00",
     address: "Boulevard de la Marina, Abomey-Calavi"
@@ -22,7 +22,7 @@ export const accommodations = [
     price: "15 000 FCFA/nuit",
     rating: 3,
     amenities: ["Restaurant", "Wi-Fi", "Terrasse", "Petit-déjeuner inclus"],
-    nearSite: "Village Artisanal de Ganvié",
+    nearSite: "Embarcadère de Tokpa-Zoungo",
     location: { lat: 6.41, lng: 2.39 },
     phone: "+229 21 36 11 22",
     address: "Route du Lac, Abomey-Calavi"
@@ -36,7 +36,7 @@ export const accommodations = [
     price: "45 000 FCFA/nuit",
     rating: 5,
     amenities: ["Cuisine équipée", "Piscine", "Salle de sport", "Wi-Fi", "Parking sécurisé"],
-    nearSite: "Forêt Classée",
+    nearSite: "Sanctuaire des singes de Drabo-Gbo",
     location: { lat: 6.46, lng: 2.34 },
     phone: "+229 21 36 33 44",
     address: "Quartier Résidentiel, Abomey-Calavi"
@@ -50,7 +50,7 @@ export const accommodations = [
     price: "10 000 FCFA/nuit",
     rating: 4,
     amenities: ["Repas inclus", "Wi-Fi", "Jardin", "Guide local"],
-    nearSite: "Temple des Pythons",
+    nearSite: "Temple Vodoun DAR",
     location: { lat: 6.44, lng: 2.37 },
     phone: "+229 97 12 34 56",
     address: "Quartier Zogbo, Abomey-Calavi"
@@ -64,7 +64,7 @@ export const accommodations = [
     price: "25 000 FCFA/nuit",
     rating: 4,
     amenities: ["Bungalow privé", "Restaurant bio", "Kayak", "Observation oiseaux"],
-    nearSite: "Forêt Classée",
+    nearSite: "Refuge animalier de la vallée du Sitatunga",
     location: { lat: 6.47, lng: 2.32 },
     phone: "+229 95 67 89 01",
     address: "Zone Mangrove, Abomey-Calavi"
@@ -78,7 +78,7 @@ export const accommodations = [
     price: "28 000 FCFA/nuit",
     rating: 3,
     amenities: ["Restaurant", "Bar", "Wi-Fi", "Climatisation", "Service chambre"],
-    nearSite: "Marché de Dantokpa",
+    nearSite: "Musée de la Récade",
     location: { lat: 6.38, lng: 2.42 },
     phone: "+229 21 36 55 66",
     address: "Avenue Steinmetz, Abomey-Calavi"

@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Clock, Banknote, MapPin, Calendar } from 'lucide-react'
+import { ArrowLeft, Clock, Banknote, MapPin, CalendarDays } from 'lucide-react'
 import { sites } from '../data/sites'
 import SiteCard from '../components/SiteCard'
 
@@ -91,8 +91,8 @@ export default function SiteDetail() {
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-primary mt-0.5" />
                     <div>
-                      <p className="text-sm text-gray-500">Durée de visite</p>
-                      <p className="font-semibold text-gray-900">{site.duration}</p>
+                      <p className="text-sm text-gray-500">Horaires</p>
+                      <p className="font-semibold text-gray-900">{site.hours}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -103,17 +103,17 @@ export default function SiteDetail() {
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Calendar className="w-5 h-5 text-primary mt-0.5" />
+                    <CalendarDays className="w-5 h-5 text-primary mt-0.5" />
                     <div>
-                      <p className="text-sm text-gray-500">Meilleure période</p>
-                      <p className="font-semibold text-gray-900">{site.bestTime}</p>
+                      <p className="text-sm text-gray-500">Arrondissement</p>
+                      <p className="font-semibold text-gray-900">{site.address}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-primary mt-0.5" />
                     <div>
-                      <p className="text-sm text-gray-500">Adresse</p>
-                      <p className="font-semibold text-gray-900">{site.address}</p>
+                      <p className="text-sm text-gray-500">Catégorie</p>
+                      <p className="font-semibold text-gray-900">{site.category}</p>
                     </div>
                   </div>
                 </div>
