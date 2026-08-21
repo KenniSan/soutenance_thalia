@@ -28,7 +28,7 @@ export default function SiteDetail() {
 
   return (
     <div className="pt-20">
-      <section className="relative h-[60vh] overflow-hidden">
+      <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
         <motion.img
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -48,24 +48,24 @@ export default function SiteDetail() {
               <span className="inline-block px-3 py-1 bg-secondary/80 rounded-full text-xs font-semibold text-white mb-3">
                 {site.category}
               </span>
-              <h1 className="font-display text-4xl md:text-5xl font-bold text-white">{site.name}</h1>
+              <h1 className="font-display text-3xl md:text-5xl font-bold text-white">{site.name}</h1>
             </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
             <div className="lg:col-span-2">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <h2 className="font-display text-2xl font-bold text-gray-900 mb-4">À propos de ce lieu</h2>
-                <p className="text-gray-600 leading-relaxed text-lg">{site.longDescription}</p>
+                <h2 className="font-display text-xl md:text-2xl font-bold text-gray-900 mb-4">À propos de ce lieu</h2>
+                <p className="text-gray-600 leading-relaxed text-base md:text-lg">{site.longDescription}</p>
               </motion.div>
 
               {site.video && (
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-10">
-                  <h3 className="font-display text-xl font-bold text-gray-900 mb-4">Vidéo</h3>
+                  <h3 className="font-display text-lg md:text-xl font-bold text-gray-900 mb-4">Vidéo</h3>
                   <video
                     src={site.video}
                     poster={site.image}
@@ -76,8 +76,8 @@ export default function SiteDetail() {
               )}
 
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-10">
-                <h3 className="font-display text-xl font-bold text-gray-900 mb-4">Galerie</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <h3 className="font-display text-lg md:text-xl font-bold text-gray-900 mb-4">Galerie</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {site.gallery.map((img, i) => (
                     <motion.img
                       key={i}
@@ -88,7 +88,7 @@ export default function SiteDetail() {
                       src={img}
                       alt=""
                       onClick={() => setLightboxIndex(i)}
-                      className="w-full h-48 object-cover rounded-xl hover:shadow-lg transition-shadow cursor-pointer"
+                      className="w-full h-40 md:h-48 object-cover rounded-xl hover:shadow-lg transition-shadow cursor-pointer"
                     />
                   ))}
                 </div>
@@ -100,9 +100,9 @@ export default function SiteDetail() {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg p-6 sticky top-28"
+                className="bg-white rounded-2xl shadow-lg p-4 md:p-6 sticky top-28"
               >
-                <h3 className="font-display text-xl font-bold text-gray-900 mb-6">Informations pratiques</h3>
+                <h3 className="font-display text-lg md:text-xl font-bold text-gray-900 mb-6">Informations pratiques</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-primary mt-0.5" />
@@ -145,9 +145,9 @@ export default function SiteDetail() {
         </div>
       </section>
 
-      <section className="py-16 bg-cream/30">
+      <section className="py-8 md:py-16 bg-cream/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-2xl font-bold text-gray-900 mb-8">Autres sites à découvrir</h2>
+          <h2 className="font-display text-xl md:text-2xl font-bold text-gray-900 mb-8">Autres sites à découvrir</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {otherSites.map((s, i) => (
               <SiteCard key={s.id} site={s} index={i} />

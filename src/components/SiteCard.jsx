@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { MapPin, Clock, Banknote } from 'lucide-react'
+import { Clock, Banknote } from 'lucide-react'
 
 export default function SiteCard({ site, index = 0 }) {
   return (
@@ -10,9 +10,10 @@ export default function SiteCard({ site, index = 0 }) {
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -8 }}
-      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300"
+      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 relative cursor-pointer"
     >
-      <div className="relative overflow-hidden h-56">
+      <Link to={`/sites/${site.slug}`} className="absolute inset-0 z-10" />
+      <div className="relative overflow-hidden h-48 md:h-56">
         <img
           src={site.image}
           alt={site.name}
@@ -24,14 +25,14 @@ export default function SiteCard({ site, index = 0 }) {
           </span>
         </div>
       </div>
-      <div className="p-6">
+      <div className="p-4 md:p-6">
         <h3 className="font-display text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
           {site.name}
         </h3>
         <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
           {site.description}
         </p>
-        <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
+        <div className="flex items-center gap-4 text-xs text-gray-500">
           <span className="flex items-center gap-1">
             <Clock className="w-3.5 h-3.5" />
             {site.duration}
@@ -41,13 +42,6 @@ export default function SiteCard({ site, index = 0 }) {
             {site.price}
           </span>
         </div>
-        <Link
-          to={`/sites/${site.slug}`}
-          className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
-        >
-          <MapPin className="w-4 h-4" />
-          Découvrir
-        </Link>
       </div>
     </motion.div>
   )

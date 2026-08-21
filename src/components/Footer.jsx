@@ -4,8 +4,8 @@ import { MapPin, Phone, Mail, Globe, Camera } from 'lucide-react'
 export default function Footer() {
   return (
     <footer className="bg-primary-dark text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <MapPin className="w-6 h-6 text-secondary" />
@@ -21,7 +21,6 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { to: '/sites', label: 'Sites touristiques' },
-                { to: '/hebergements', label: 'Hébergements' },
                 { to: '/carte', label: 'Carte & Circuits' },
                 { to: '/guides', label: 'Guides' },
               ].map((link) => (
@@ -65,7 +64,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 text-center text-white/50 text-sm">
+        <div className="border-t border-white/10 mt-8 md:mt-12 pt-6 md:pt-8 text-center text-white/50 text-sm">
           <p>&copy; {new Date().getFullYear()} Office du Tourisme d'Abomey-Calavi. Tous droits réservés.</p>
         </div>
       </div>

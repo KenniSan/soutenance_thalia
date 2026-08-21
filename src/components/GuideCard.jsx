@@ -11,7 +11,7 @@ export default function GuideCard({ guide, index = 0 }) {
       whileHover={{ y: -8 }}
       className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300"
     >
-      <div className="p-6">
+      <div className="p-4 md:p-6">
         <div className="flex items-start gap-4 mb-4">
           <img
             src={guide.photo}

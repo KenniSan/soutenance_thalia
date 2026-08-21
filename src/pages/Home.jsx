@@ -1,30 +1,21 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, MapPin, Compass, Users, Star, Play } from 'lucide-react'
+import { ArrowRight, MapPin, Compass, Users, Star } from 'lucide-react'
 import SiteCard from '../components/SiteCard'
 import CircuitCard from '../components/CircuitCard'
 import GuideCard from '../components/GuideCard'
+import HeroCarousel from '../components/HeroCarousel'
 import { sites } from '../data/sites'
 import { circuits } from '../data/circuits'
 import { guides } from '../data/guides'
 import { videos } from '../data/videos'
-import { mediaUrl } from '../lib/media'
 
 export default function Home() {
   return (
     <div>
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover"
-            poster="/photos/embarcadere-tokpa-zoungo/01.webp"
-          >
-            <source src={mediaUrl("/videos/embarcadere.mp4")} type="video/mp4" />
-          </video>
+          <HeroCarousel />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -93,7 +84,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -118,16 +109,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-12"
           >
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">À découvrir</span>
-            <h2 className="font-display text-4xl font-bold text-gray-900 mt-2">Sites touristiques populaires</h2>
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-gray-900 mt-2">Sites touristiques populaires</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
               Des forêts tropicales aux villages lacustres, explorez les trésors d'Abomey-Calavi.
             </p>
@@ -149,22 +140,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-cream/30">
+      <section className="py-12 md:py-20 bg-cream/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-12"
           >
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Parcours</span>
-            <h2 className="font-display text-4xl font-bold text-gray-900 mt-2">Circuits touristiques</h2>
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-gray-900 mt-2">Circuit touristique</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              Des itinéraires pensés pour vous faire vivre une expérience complète.
+              Un itinéraire pensé pour vous faire vivre une expérience complète.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {circuits.slice(0, 2).map((circuit, i) => (
+          <div className="max-w-2xl mx-auto">
+            {circuits.map((circuit, i) => (
               <CircuitCard key={circuit.id} circuit={circuit} index={i} />
             ))}
           </div>
@@ -173,25 +164,25 @@ export default function Home() {
               to="/carte"
               className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary font-semibold rounded-xl hover:bg-primary hover:text-white transition-all"
             >
-              Voir tous les circuits
+              Voir le circuit sur la carte
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-cream/30">
+      <section className="py-12 md:py-20 bg-cream/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-12"
           >
-            <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Vues aériennes</span>
-            <h2 className="font-display text-4xl font-bold text-gray-900 mt-2">Découvrez en vidéo</h2>
+            <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Vidéos</span>
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-gray-900 mt-2">Découvrez en vidéo</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              Survolez les sites touristiques d'Abomey-Calavi et admirez la beauté de la commune depuis le ciel.
+              Explorez les sites touristiques d'Abomey-Calavi à travers nos vidéos.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -202,26 +193,17 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group relative rounded-2xl overflow-hidden shadow-lg bg-black"
+                className="rounded-2xl overflow-hidden shadow-lg bg-primary-dark"
               >
                 <video
                   src={video.src}
                   poster={video.poster}
-                  muted
-                  loop
-                  playsInline
                   controls
+                  playsInline
                   className="w-full aspect-video object-cover"
-                  onMouseEnter={(e) => e.target.play()}
-                  onMouseLeave={(e) => { e.target.pause(); e.target.currentTime = 0; }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
+                <div className="p-4">
                   <h3 className="font-display text-lg font-bold text-white">{video.name}</h3>
-                  <p className="text-white/70 text-xs mt-1 line-clamp-2">{video.description}</p>
-                </div>
-                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-secondary transition-colors">
-                  <Play className="w-5 h-5 text-white fill-white" />
                 </div>
               </motion.div>
             ))}
@@ -229,16 +211,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-12"
           >
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Accompagnement</span>
-            <h2 className="font-display text-4xl font-bold text-gray-900 mt-2">Nos guides touristiques</h2>
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-gray-900 mt-2">Nos guides touristiques</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
               Des experts locaux passionnés pour enrichir votre découverte.
             </p>
@@ -260,14 +242,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-primary-dark">
+      <section className="py-12 md:py-20 bg-primary-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-4xl font-bold text-white mb-4">
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-white mb-4">
               Prêt à vivre l'aventure ?
             </h2>
             <p className="text-white/70 text-lg mb-8">

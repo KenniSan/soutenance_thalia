@@ -17,7 +17,7 @@ export default function CircuitCard({ circuit, index = 0 }) {
       whileHover={{ y: -8 }}
       className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300"
     >
-      <div className="relative overflow-hidden h-56">
+      <div className="relative overflow-hidden h-48 md:h-56">
         <img
           src={circuit.image}
           alt={circuit.name}
@@ -25,7 +25,7 @@ export default function CircuitCard({ circuit, index = 0 }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute bottom-4 left-4 right-4">
-          <h3 className="font-display text-xl font-bold text-white mb-1">{circuit.name}</h3>
+          <h3 className="font-display text-lg md:text-xl font-bold text-white mb-1">{circuit.name}</h3>
           <div className="flex items-center gap-3 text-white/80 text-xs">
             <span className="flex items-center gap-1">
               <Clock className="w-3.5 h-3.5" />
@@ -37,7 +37,7 @@ export default function CircuitCard({ circuit, index = 0 }) {
           </div>
         </div>
       </div>
-      <div className="p-6">
+      <div className="p-4 md:p-6">
         <p className="text-gray-600 text-sm leading-relaxed mb-4">
           {circuit.description}
         </p>

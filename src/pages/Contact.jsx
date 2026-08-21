@@ -15,27 +15,27 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
-      <section className="relative py-20 bg-primary-dark overflow-hidden">
+      <section className="relative py-12 md:py-20 bg-primary-dark overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Contactez-nous</h1>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto">
+            <h1 className="font-display text-3xl md:text-5xl font-bold text-white mb-4">Contactez-nous</h1>
+            <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto">
               Une question ? Besoin d'informations ? Nous sommes là pour vous aider.
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-8 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="lg:col-span-1"
             >
-              <h2 className="font-display text-2xl font-bold text-gray-900 mb-6">Informations</h2>
+              <h2 className="font-display text-xl md:text-2xl font-bold text-gray-900 mb-6">Informations</h2>
               <div className="space-y-6">
                 {[
                   { icon: MapPin, title: 'Adresse', text: 'Mairie d\'Abomey-Calavi\nBP 123, Abomey-Calavi, Bénin' },
@@ -62,8 +62,8 @@ export default function Contact() {
               viewport={{ once: true }}
               className="lg:col-span-2"
             >
-              <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h2 className="font-display text-2xl font-bold text-gray-900 mb-6">Envoyez-nous un message</h2>
+              <div className="bg-white rounded-2xl shadow-lg p-4 md:p-8">
+                <h2 className="font-display text-xl md:text-2xl font-bold text-gray-900 mb-6">Envoyez-nous un message</h2>
                 {submitted && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -125,7 +125,7 @@ export default function Contact() {
                   </div>
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-colors"
                   >
                     <Send className="w-5 h-5" />
                     Envoyer le message
