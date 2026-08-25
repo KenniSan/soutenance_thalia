@@ -158,14 +158,14 @@ export const sites = [
     category: "Touristique",
     description: "Complexe agricole et gastronomique. Dégustation de produits locaux et hébergement en pleine nature.",
     longDescription: "Le Complexe Assouka est un hommage vivant à la générosité de la terre d'Abomey-Calavi. Dans cette escale où la nature dialogue avec la gourmandise, le visiteur s'émerveille devant les promesses des cultures locales avant de céder à la tentation d'une table authentique. On y vient pour respirer le calme des champs, savourer la fraîcheur des produits du domaine et prolonger la quiétude du soir dans la douceur d'un hébergement chaleureux. Une véritable ode aux douceurs simples et vraies.",
-    image: "/photos/complexe-assouka/06.webp",
+    image: "/photos/complexe-assouka/05.webp",
     gallery: [
-      "/photos/complexe-assouka/06.webp",
+      "/photos/complexe-assouka/05.webp",
       "/photos/complexe-assouka/01.webp",
       "/photos/complexe-assouka/02.webp",
       "/photos/complexe-assouka/03.webp",
       "/photos/complexe-assouka/04.webp",
-      "/photos/complexe-assouka/05.webp",
+      "/photos/complexe-assouka/06.webp",
       "/photos/complexe-assouka/07.webp"
     ],
     location: { lat: 6.42238, lng: 2.35036 },

@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="mb-4">
               <img
                 src="/logo.jpeg"
-                alt="AbC Tour"
+                alt="Calavi Tour"
                 className="h-16 md:h-20 w-auto rounded-full object-cover"
               />
             </div>
@@ -68,7 +68,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-8 md:mt-12 pt-6 md:pt-8 text-center text-white/50 text-sm">
-          <p>&copy; {new Date().getFullYear()} AbC Tour. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} Calavi Tour. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

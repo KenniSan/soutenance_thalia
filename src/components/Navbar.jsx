@@ -40,7 +40,7 @@ export default function Navbar() {
           <Link to="/" className="flex items-center gap-2">
             <img
               src="/logo.jpeg"
-              alt="AbC Tour"
+              alt="Calavi Tour"
               className="h-14 md:h-16 w-auto rounded-full object-cover"
             />
           </Link>
