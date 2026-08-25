@@ -36,7 +36,7 @@ export default function HeroCarousel() {
         />
       </AnimatePresence>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+      <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {Array.from({ length: Math.min(7, slideCount) }).map((_, i) => {
           const actualIndex = currentIndex < 4 ? i : currentIndex - 3 + i
           if (actualIndex >= slideCount) return null
@@ -52,7 +52,7 @@ export default function HeroCarousel() {
         })}
       </div>
 
-      <div className="absolute bottom-16 left-6 right-6 z-10">
+      <div className="absolute bottom-12 md:bottom-16 left-6 right-6 z-10">
         <motion.p
           key={`label-${currentIndex}`}
           initial={{ opacity: 0, y: 10 }}

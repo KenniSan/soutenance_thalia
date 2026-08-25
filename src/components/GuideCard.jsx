@@ -80,7 +80,7 @@ export default function GuideCard({ guide, index = 0 }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setShowContactModal(false)}
-            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[9999] bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -89,8 +89,8 @@ export default function GuideCard({ guide, index = 0 }) {
               onClick={(e) => e.stopPropagation()}
               className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden"
             >
-              <div className="flex items-center justify-between p-6 border-b border-gray-200">
-                <h3 className="font-display text-xl font-bold text-gray-900">Contacter {guide.name}</h3>
+              <div className="flex items-center justify-between p-4 md:p-6 border-b border-gray-200">
+                <h3 className="font-display text-lg md:text-xl font-bold text-gray-900">Contacter {guide.name}</h3>
                 <button
                   onClick={() => setShowContactModal(false)}
                   className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
@@ -99,14 +99,14 @@ export default function GuideCard({ guide, index = 0 }) {
                 </button>
               </div>
 
-              <div className="p-6 space-y-6">
+              <div className="p-4 md:p-6 space-y-4 md:space-y-6">
                 <div>
                   <div className="flex items-center gap-2 mb-3">
                     <Phone className="w-5 h-5 text-primary" />
                     <span className="font-semibold text-gray-900">Téléphone</span>
                   </div>
-                  <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
-                    <span className="flex-1 text-gray-700">{guide.phone}</span>
+                  <div className="flex items-center gap-3 p-3 md:p-4 bg-gray-50 rounded-xl">
+                    <span className="flex-1 text-sm md:text-base text-gray-700 break-all">{guide.phone}</span>
                     <button
                       onClick={() => {
                         navigator.clipboard.writeText(guide.phone)
@@ -135,8 +135,8 @@ export default function GuideCard({ guide, index = 0 }) {
                     <Mail className="w-5 h-5 text-primary" />
                     <span className="font-semibold text-gray-900">Email</span>
                   </div>
-                  <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
-                    <span className="flex-1 text-gray-700 break-all">{guide.email}</span>
+                  <div className="flex items-center gap-3 p-3 md:p-4 bg-gray-50 rounded-xl">
+                    <span className="flex-1 text-sm md:text-base text-gray-700 break-all">{guide.email}</span>
                     <div className="flex flex-col gap-2">
                       <button
                         onClick={() => {

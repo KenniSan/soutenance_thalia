@@ -19,7 +19,7 @@ export default function Accommodations() {
 
   return (
     <div className="pt-20">
-      <section className="relative py-20 bg-primary-dark overflow-hidden">
+      <section className="relative py-12 md:py-20 bg-primary-dark overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
             src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920"
@@ -29,15 +29,15 @@ export default function Accommodations() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Hébergements</h1>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto">
+            <h1 className="font-display text-3xl md:text-5xl font-bold text-white mb-4">Hébergements</h1>
+            <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto">
               Trouvez le logement idéal pour votre séjour à Abomey-Calavi
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-8 bg-white border-b sticky top-20 z-30">
+      <section className="py-4 md:py-8 bg-white border-b sticky top-20 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <div className="relative flex-1 w-full">
@@ -50,12 +50,12 @@ export default function Accommodations() {
                 className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
               />
             </div>
-            <div className="flex items-center gap-2 flex-wrap">
+            <div className="flex items-center gap-2 flex-wrap justify-center">
               {types.map((type) => (
                 <button
                   key={type}
                   onClick={() => setActiveType(type)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap ${
+                  className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all whitespace-nowrap ${
                     activeType === type
                       ? 'bg-primary text-white'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'

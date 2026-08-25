@@ -8,8 +8,11 @@ export const sites = [
     category: "Religieux",
     description: "Sanctuaire central du culte Zangbeto, gardien traditionnel de la nuit. Lieu sacré de la commune d'Abomey-Calavi.",
     longDescription: "Le Zangbeto Vadje Centrale est l'un des sanctuaires les plus importants de la commune d'Abomey-Calavi. Les Zangbeto sont des gardiens traditionnels de la nuit, figures emblématiques de la culture vodoun. Ce lieu sacré abrite les pratiques rituelles et les cérémonies qui perpétuent cette tradition ancestrale.",
-    image: "/photos/zangbeto-vadje/01.webp",
-    gallery: ["/photos/zangbeto-vadje/01.webp"],
+    image: "/photos/circuit-centre/03.webp",
+    gallery: [
+      "/photos/zangbeto-vadje/01.webp",
+      "/photos/circuit-centre/03.webp"
+    ],
     location: { lat: 6.50762, lng: 2.35338 },
     address: "Abomey-Calavi Centre",
     hours: "A définir",
@@ -155,14 +158,14 @@ export const sites = [
     category: "Touristique",
     description: "Complexe agricole et gastronomique. Dégustation de produits locaux et hébergement en pleine nature.",
     longDescription: "Le Complexe Assouka est un hommage vivant à la générosité de la terre d'Abomey-Calavi. Dans cette escale où la nature dialogue avec la gourmandise, le visiteur s'émerveille devant les promesses des cultures locales avant de céder à la tentation d'une table authentique. On y vient pour respirer le calme des champs, savourer la fraîcheur des produits du domaine et prolonger la quiétude du soir dans la douceur d'un hébergement chaleureux. Une véritable ode aux douceurs simples et vraies.",
-    image: "/photos/complexe-assouka/01.webp",
+    image: "/photos/complexe-assouka/06.webp",
     gallery: [
+      "/photos/complexe-assouka/06.webp",
       "/photos/complexe-assouka/01.webp",
       "/photos/complexe-assouka/02.webp",
       "/photos/complexe-assouka/03.webp",
       "/photos/complexe-assouka/04.webp",
       "/photos/complexe-assouka/05.webp",
-      "/photos/complexe-assouka/06.webp",
       "/photos/complexe-assouka/07.webp"
     ],
     location: { lat: 6.42238, lng: 2.35036 },
@@ -223,12 +226,12 @@ export const sites = [
     category: "Naturel",
     description: "Sanctuaire de protection des tortues. ONG AMSHARTE pour l'environnement et la conservation.",
     longDescription: "Le Site de tortues de Togbin est un sanctuaire dédié à la protection des tortues marines. Géré par l'ONG AMSHARTE, ce lieu joue un rôle crucial dans la conservation de ces espèces menacées. Les visiteurs peuvent découvrir les efforts de préservation et observer ces animaux fascinants dans leur habitat naturel.",
-    image: "/photos/site-tortues/01.webp",
+    image: "/photos/site-tortues/04.webp",
     gallery: [
+      "/photos/site-tortues/04.webp",
       "/photos/site-tortues/01.webp",
       "/photos/site-tortues/02.webp",
       "/photos/site-tortues/03.webp",
-      "/photos/site-tortues/04.webp",
       "/photos/site-tortues/05.webp",
       "/photos/site-tortues/06.webp",
       "/photos/site-tortues/07.webp"
@@ -290,12 +293,12 @@ export const sites = [
     category: "Naturel",
     description: "Forêt sacrée refuge des primates. Sentiers préservés pour une rencontre intime avec la vie sauvage.",
     longDescription: "Sous la canopée majestueuse de Drabo-Gbo, la forêt respire à son propre rythme, secrète et préservée. Ce royaume de verdure est le refuge béni des primates qui s'élancent avec grâce de branche en branche, sous le regard attentif des amoureux de la nature. Guidé par le chant de la forêt et le bruissement des feuilles, le visiteur s'enfonce le long de sentiers préservés pour vivre une rencontre intime et poétique avec la vie sauvage dans ce qu'elle a de plus pur.",
-    image: "/photos/sanctuaire-drabo-gbo/01.webp",
+    image: "/photos/sanctuaire-drabo-gbo/04.webp",
     gallery: [
+      "/photos/sanctuaire-drabo-gbo/04.webp",
       "/photos/sanctuaire-drabo-gbo/01.webp",
       "/photos/sanctuaire-drabo-gbo/02.webp",
       "/photos/sanctuaire-drabo-gbo/03.webp",
-      "/photos/sanctuaire-drabo-gbo/04.webp",
       "/photos/sanctuaire-drabo-gbo/05.webp",
       "/photos/sanctuaire-drabo-gbo/06.webp",
       "/photos/sanctuaire-drabo-gbo/07.webp"

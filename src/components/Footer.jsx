@@ -7,9 +7,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <MapPin className="w-6 h-6 text-secondary" />
-              <span className="font-display text-lg font-bold">Abomey-Calavi</span>
+            <div className="mb-4">
+              <img
+                src="/logo.jpeg"
+                alt="AbC Tour"
+                className="h-16 md:h-20 w-auto rounded-full object-cover"
+              />
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
               Découvrez la richesse touristique de la commune d'Abomey-Calavi, entre nature, culture et traditions.
@@ -65,7 +68,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-8 md:mt-12 pt-6 md:pt-8 text-center text-white/50 text-sm">
-          <p>&copy; {new Date().getFullYear()} Office du Tourisme d'Abomey-Calavi. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} AbC Tour. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

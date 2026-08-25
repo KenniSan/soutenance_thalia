@@ -72,7 +72,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-24 left-1/2 -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -98,11 +98,11 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
-                className="text-center p-8 rounded-2xl bg-cream/50"
+                className="text-center p-6 md:p-8 rounded-2xl bg-cream/50"
               >
-                <stat.icon className="w-10 h-10 text-primary mx-auto mb-4" />
-                <p className="text-3xl font-bold text-primary-dark font-display">{stat.value}</p>
-                <p className="text-sm text-gray-600 mt-1">{stat.desc}</p>
+                <stat.icon className="w-8 h-8 md:w-10 md:h-10 text-primary mx-auto mb-4" />
+                <p className="text-2xl md:text-3xl font-bold text-primary-dark font-display">{stat.value}</p>
+                <p className="text-xs md:text-sm text-gray-600 mt-1">{stat.desc}</p>
               </motion.div>
             ))}
           </div>

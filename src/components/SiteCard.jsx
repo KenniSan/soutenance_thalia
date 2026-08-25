@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Clock, Banknote, ImageOff } from 'lucide-react'
+import { MapPin, Banknote, ImageOff } from 'lucide-react'
 
 export default function SiteCard({ site, index = 0 }) {
   return (
@@ -40,8 +40,8 @@ export default function SiteCard({ site, index = 0 }) {
         </p>
         <div className="flex items-center gap-4 text-xs text-gray-500">
           <span className="flex items-center gap-1">
-            <Clock className="w-3.5 h-3.5" />
-            {site.duration}
+            <MapPin className="w-3.5 h-3.5" />
+            {site.address}
           </span>
           <span className="flex items-center gap-1">
             <Banknote className="w-3.5 h-3.5" />

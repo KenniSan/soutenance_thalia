@@ -11,7 +11,7 @@ export default function AccommodationCard({ accommodation, index = 0 }) {
       whileHover={{ y: -8 }}
       className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300"
     >
-      <div className="relative overflow-hidden h-52">
+      <div className="relative overflow-hidden h-48 md:h-56">
         <img
           src={accommodation.image}
           alt={accommodation.name}
@@ -27,7 +27,7 @@ export default function AccommodationCard({ accommodation, index = 0 }) {
           <span className="text-xs font-semibold">{accommodation.rating}</span>
         </div>
       </div>
-      <div className="p-6">
+      <div className="p-4 md:p-6">
         <h3 className="font-display text-lg font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">
           {accommodation.name}
         </h3>
