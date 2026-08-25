@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Sites from './pages/Sites'
 import SiteDetail from './pages/SiteDetail'
+import CircuitDetail from './pages/CircuitDetail'
 import MapPage from './pages/MapPage'
 import Guides from './pages/Guides'
 import Contact from './pages/Contact'
@@ -25,6 +26,7 @@ function AnimatedRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/sites" element={<Sites />} />
           <Route path="/sites/:slug" element={<SiteDetail />} />
+          <Route path="/circuits/:slug" element={<CircuitDetail />} />
           <Route path="/carte" element={<MapPage />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/contact" element={<Contact />} />

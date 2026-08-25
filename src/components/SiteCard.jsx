@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Clock, Banknote } from 'lucide-react'
+import { Clock, Banknote, ImageOff } from 'lucide-react'
 
 export default function SiteCard({ site, index = 0 }) {
   return (
@@ -14,11 +14,17 @@ export default function SiteCard({ site, index = 0 }) {
     >
       <Link to={`/sites/${site.slug}`} className="absolute inset-0 z-10" />
       <div className="relative overflow-hidden h-48 md:h-56">
-        <img
-          src={site.image}
-          alt={site.name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-        />
+        {site.image ? (
+          <img
+            src={site.image}
+            alt={site.name}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center">
+            <ImageOff className="w-12 h-12 text-primary/40" />
+          </div>
+        )}
         <div className="absolute top-4 left-4">
           <span className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-primary">
             {site.category}

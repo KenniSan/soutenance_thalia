@@ -29,8 +29,7 @@ export const sites = [
       "/photos/embarcadere-tokpa-zoungo/03.webp",
       "/photos/embarcadere-tokpa-zoungo/04.webp",
       "/photos/embarcadere-tokpa-zoungo/05.webp",
-      "/photos/embarcadere-tokpa-zoungo/06.webp",
-      "/photos/embarcadere-tokpa-zoungo/07.webp"
+      "/photos/embarcadere-tokpa-zoungo/06.webp"
     ],
     video: mediaUrl("/videos/embarcadere.mp4"),
     location: { lat: 6.44756, lng: 2.36164 },
@@ -46,7 +45,12 @@ export const sites = [
     description: "Ancien palais royal témoignant de l'histoire dahoméenne. Architecture traditionnelle et lieu de mémoire.",
     longDescription: "Le Palais Royal Fofo DJAKA est un vestige de l'histoire royale du Dahomey. Ce lieu culturel abrite des témoignages architecturaux et historiques de l'époque des rois. Il représente un lien important avec le passé glorieux de la région et offre aux visiteurs un aperçu de la vie royale d'autrefois.",
     image: "/photos/palais-royal-fofo-djaka/01.webp",
-    gallery: ["/photos/palais-royal-fofo-djaka/01.webp"],
+    gallery: [
+      "/photos/palais-royal-fofo-djaka/01.webp",
+      "/photos/palais-royal-fofo-djaka/02.webp",
+      "/photos/palais-royal-fofo-djaka/03.webp",
+      "/photos/palais-royal-fofo-djaka/04.webp"
+    ],
     location: { lat: 6.45045, lng: 2.35975 },
     address: "Abomey-Calavi Centre",
     hours: "A définir",
@@ -110,13 +114,13 @@ export const sites = [
   },
   {
     id: 8,
-    name: "Temple Vodoun DOHONTO",
-    slug: "temple-vodoun-dohonto",
+    name: "Temple Vodoun DJISSOUHONTO",
+    slug: "temple-vodoun-djissouhonto",
     category: "Religieux",
-    description: "Temple vodoun DOHONTO. Sanctuaire de pratiques spirituelles et de traditions ancestrales.",
-    longDescription: "Le Temple Vodoun DOHONTO est un sanctuaire dédié aux pratiques spirituelles traditionnelles. Comme les autres temples de la région, il joue un rôle important dans la préservation de la culture vodoun et offre aux visiteurs un aperçu des croyances et rituels locaux.",
-    image: "/photos/temple-vodoun-dohonto/01.webp",
-    gallery: ["/photos/temple-vodoun-dohonto/01.webp"],
+    description: "Temple vodoun DJISSOUHONTO. Sanctuaire de pratiques spirituelles et de traditions ancestrales.",
+    longDescription: "Le Temple Vodoun DJISSOUHONTO est un sanctuaire dédié aux pratiques spirituelles traditionnelles. Comme les autres temples de la région, il joue un rôle important dans la préservation de la culture vodoun et offre aux visiteurs un aperçu des croyances et rituels locaux.",
+    image: "/photos/temple-vodoun-djissouhonto/01.webp",
+    gallery: ["/photos/temple-vodoun-djissouhonto/01.webp"],
     location: { lat: 6.44796, lng: 2.35639 },
     address: "Abomey-Calavi Centre",
     hours: "A définir",

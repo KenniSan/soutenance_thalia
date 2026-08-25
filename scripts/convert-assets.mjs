@@ -20,6 +20,7 @@ const FOLDER_TO_SLUG = {
   'Refuge animalier de la vallée Sitatunga Photos': 'refuge-sitatunga',
   'Sanctuaire des singes de Drabo-Gbo Photos': 'sanctuaire-drabo-gbo',
   'Sites des tortues de Togbin Photos': 'site-tortues',
+  'Autres Photos': 'autres',
 }
 
 const VIDEO_RENAME = {

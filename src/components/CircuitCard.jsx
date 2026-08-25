@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Clock, Check } from 'lucide-react'
 
@@ -15,8 +16,9 @@ export default function CircuitCard({ circuit, index = 0 }) {
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -8 }}
-      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300"
+      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 relative cursor-pointer"
     >
+      <Link to={`/circuits/${circuit.slug}`} className="absolute inset-0 z-10" />
       <div className="relative overflow-hidden h-48 md:h-56">
         <img
           src={circuit.image}
@@ -73,9 +75,12 @@ export default function CircuitCard({ circuit, index = 0 }) {
             <p className="text-xs text-gray-500">À partir de</p>
             <p className="text-lg font-bold text-primary">{circuit.price}</p>
           </div>
-          <button className="px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-colors">
+          <Link
+            to="/guides"
+            className="relative z-20 px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-colors"
+          >
             Réserver
-          </button>
+          </Link>
         </div>
       </div>
     </motion.div>

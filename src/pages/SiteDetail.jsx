@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Clock, Banknote, MapPin, CalendarDays } from 'lucide-react'
+import { ArrowLeft, Clock, Banknote, MapPin, CalendarDays, ImageOff } from 'lucide-react'
 import { sites } from '../data/sites'
 import SiteCard from '../components/SiteCard'
 import Lightbox from '../components/Lightbox'
@@ -29,14 +29,20 @@ export default function SiteDetail() {
   return (
     <div className="pt-20">
       <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
-        <motion.img
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1 }}
-          src={site.image}
-          alt={site.name}
-          className="w-full h-full object-cover"
-        />
+        {site.image ? (
+          <motion.img
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1 }}
+            src={site.image}
+            alt={site.name}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center">
+            <ImageOff className="w-20 h-20 text-primary/50" />
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         <div className="absolute bottom-8 left-0 right-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,24 +81,26 @@ export default function SiteDetail() {
                 </motion.div>
               )}
 
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-10">
-                <h3 className="font-display text-lg md:text-xl font-bold text-gray-900 mb-4">Galerie</h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  {site.gallery.map((img, i) => (
-                    <motion.img
-                      key={i}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.1 }}
-                      src={img}
-                      alt=""
-                      onClick={() => setLightboxIndex(i)}
-                      className="w-full h-40 md:h-48 object-cover rounded-xl hover:shadow-lg transition-shadow cursor-pointer"
-                    />
-                  ))}
-                </div>
-              </motion.div>
+              {site.gallery.length > 0 && (
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-10">
+                  <h3 className="font-display text-lg md:text-xl font-bold text-gray-900 mb-4">Galerie</h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    {site.gallery.map((img, i) => (
+                      <motion.img
+                        key={i}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.1 }}
+                        src={img}
+                        alt=""
+                        onClick={() => setLightboxIndex(i)}
+                        className="w-full h-40 md:h-48 object-cover rounded-xl hover:shadow-lg transition-shadow cursor-pointer"
+                      />
+                    ))}
+                  </div>
+                </motion.div>
+              )}
             </div>
 
             <div>
