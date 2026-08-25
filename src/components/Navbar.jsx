@@ -14,6 +14,7 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [isLogoEnlarged, setIsLogoEnlarged] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
@@ -27,6 +28,7 @@ export default function Navbar() {
   }, [location])
 
   return (
+    <>
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -37,7 +39,20 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2">
+          <Link 
+            to="/" 
+            className="flex items-center gap-2"
+            onClick={(e) => {
+              if (isLogoEnlarged) {
+                e.preventDefault()
+                setIsLogoEnlarged(false)
+              }
+            }}
+            onDoubleClick={(e) => {
+              e.preventDefault()
+              setIsLogoEnlarged(true)
+            }}
+          >
             <img
               src="/logo.jpeg"
               alt="Calavi Tour"
@@ -97,5 +112,36 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </motion.nav>
+
+    <AnimatePresence>
+    {isLogoEnlarged && (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={() => setIsLogoEnlarged(false)}
+        className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 cursor-pointer"
+      >
+        <motion.img
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.5, opacity: 0 }}
+          transition={{ type: "spring", duration: 0.5 }}
+          src="/logo.jpeg"
+          alt="Calavi Tour"
+          className="max-w-[90vw] max-h-[90vh] w-auto h-auto rounded-full object-cover shadow-2xl"
+          onClick={(e) => e.stopPropagation()}
+        />
+        <button
+          onClick={() => setIsLogoEnlarged(false)}
+          className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-red-500/80 transition-colors"
+          aria-label="Fermer"
+        >
+          <X className="w-6 h-6" />
+        </button>
+      </motion.div>
+    )}
+    </AnimatePresence>
+    </>
   )
 }
