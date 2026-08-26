@@ -51,10 +51,6 @@ export default function Footer() {
                 <Mail className="w-4 h-4" />
                 calavitour@gmail.com
               </li>
-              <li className="flex items-center gap-2 text-white/70 text-sm">
-                <MapPin className="w-4 h-4" />
-                Mairie d'Abomey-Calavi
-              </li>
             </ul>
           </div>
 

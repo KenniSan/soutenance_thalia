@@ -38,11 +38,9 @@ export default function Contact() {
               <h2 className="font-display text-xl md:text-2xl font-bold text-gray-900 mb-6">Informations</h2>
               <div className="space-y-6">
                 {[
-                  { icon: MapPin, title: 'Adresse', text: 'Mairie d\'Abomey-Calavi\nBP 123, Abomey-Calavi, Bénin' },
                   { icon: Phone, title: 'Appels', text: '+229 01 61 15 43 21\n+229 01 41 74 34 40' },
                   { icon: Phone, title: 'WhatsApp', text: '+229 01 41 81 71 40' },
                   { icon: Mail, title: 'Email', text: 'calavitour@gmail.com' },
-                  { icon: Clock, title: 'Horaires', text: 'Lun - Ven : 8h00 - 17h00\nSam : 9h00 - 13h00' },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
