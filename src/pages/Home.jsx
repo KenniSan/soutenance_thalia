@@ -34,7 +34,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            Découvrez Abomey-Calavi <span className="text-secondary">autrement</span>
+            Découvrez les <span className="text-secondary">perles</span> d'Abomey-Calavi
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
