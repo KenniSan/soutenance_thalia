@@ -38,7 +38,7 @@ export default function Contact() {
               <h2 className="font-display text-xl md:text-2xl font-bold text-gray-900 mb-6">Informations</h2>
               <div className="space-y-6">
                 {[
-                  { icon: Phone, title: 'Appels', text: '+229 01 61 15 43 21\n+229 01 41 74 34 40' },
+                  { icon: Phone, title: 'Appels', text: '+229 01 41 74 34 40\n+229 01 61 15 43 21' },
                   { icon: Phone, title: 'WhatsApp', text: '+229 01 41 74 34 40\n+229 01 41 81 71 40' },
                   { icon: Mail, title: 'Email', text: 'calavitour@gmail.com' },
                 ].map((item) => (
