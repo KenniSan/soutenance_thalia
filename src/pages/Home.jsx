@@ -24,9 +24,6 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            {/* <span className="inline-block px-4 py-2 bg-secondary/20 backdrop-blur-sm border border-secondary/30 rounded-full text-secondary text-sm font-medium mb-6">
-              Bienvenue à Abomey-Calavi
-            </span> */}
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
