@@ -45,7 +45,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-white/70 text-sm">
                 <Phone className="w-4 h-4" />
-                +229 01 41 81 71 40 (WhatsApp)
+                +229 01 41 81 71 40 / +229 01 41 74 34 40 (WhatsApp)
               </li>
               <li className="flex items-center gap-2 text-white/70 text-sm">
                 <Mail className="w-4 h-4" />
