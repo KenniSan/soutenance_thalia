@@ -41,11 +41,15 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-white/70 text-sm">
                 <Phone className="w-4 h-4" />
-                +229 21 36 00 00
+                +229 01 61 15 43 21
+              </li>
+              <li className="flex items-center gap-2 text-white/70 text-sm">
+                <Phone className="w-4 h-4" />
+                +229 01 41 81 71 40 (WhatsApp)
               </li>
               <li className="flex items-center gap-2 text-white/70 text-sm">
                 <Mail className="w-4 h-4" />
-                tourisme@abomey-calavi.bj
+                calavitour@gmail.com
               </li>
               <li className="flex items-center gap-2 text-white/70 text-sm">
                 <MapPin className="w-4 h-4" />

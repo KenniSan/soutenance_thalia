@@ -39,8 +39,9 @@ export default function Contact() {
               <div className="space-y-6">
                 {[
                   { icon: MapPin, title: 'Adresse', text: 'Mairie d\'Abomey-Calavi\nBP 123, Abomey-Calavi, Bénin' },
-                  { icon: Phone, title: 'Téléphone', text: '+229 21 36 00 00\n+229 97 00 00 00' },
-                  { icon: Mail, title: 'Email', text: 'tourisme@abomey-calavi.bj\ninfo@abomey-calavi.bj' },
+                  { icon: Phone, title: 'Appels', text: '+229 01 61 15 43 21\n+229 01 41 74 34 40' },
+                  { icon: Phone, title: 'WhatsApp', text: '+229 01 41 81 71 40' },
+                  { icon: Mail, title: 'Email', text: 'calavitour@gmail.com' },
                   { icon: Clock, title: 'Horaires', text: 'Lun - Ven : 8h00 - 17h00\nSam : 9h00 - 13h00' },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4">
